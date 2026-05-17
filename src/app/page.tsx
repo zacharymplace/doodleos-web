@@ -55,19 +55,6 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
-        <WindowPanel title="BOOTLOG.TXT">
-          <div className="font-mono text-xs leading-6 sm:text-sm">
-            <div className="mb-3 font-black uppercase">DoodleNet 95 Boot Sequence</div>
-            <p>&gt; Loading household companion drivers...</p>
-            <p>&gt; Mounting sock file system...</p>
-            <p>&gt; Checking recall module... <span className="font-black text-amber-700">DEGRADED</span></p>
-            <p>&gt; Detecting doorbell processor... <span className="font-black text-red-700">UNSTABLE</span></p>
-            <p>&gt; Initializing love kernel... <span className="font-black text-emerald-700">OK</span></p>
-          </div>
-        </WindowPanel>
-      </section>
-
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-indigo-100 px-3 py-1 text-sm font-semibold text-indigo-700">
@@ -146,26 +133,12 @@ export default function Home() {
 
         <div className="md:col-span-3">
           <WindowPanel title="DOODLENET95.EXE">
-            <div className="grid gap-4 md:grid-cols-4">
-              <div className="border-2 border-slate-900 bg-white p-4">
-                <div className="font-mono text-xs font-bold text-slate-500">
-                  ACTIVE INCIDENTS
-                </div>
-                <div className="mt-2 text-3xl font-black">14</div>
-              </div>
-
-              <div className="border-2 border-slate-900 bg-white p-4">
-                <div className="font-mono text-xs font-bold text-slate-500">
-                  SOCK BREACHES
-                </div>
-                <div className="mt-2 text-3xl font-black">221</div>
-              </div>
-
+            <div className="grid gap-4 md:grid-cols-3">
               <div className="border-2 border-slate-900 bg-white p-4">
                 <div className="font-mono text-xs font-bold text-slate-500">
                   RECALL STATUS
                 </div>
-                <div className="mt-2 text-3xl font-black text-amber-600">
+                <div className="mt-2 text-2xl font-black text-amber-700">
                   DEGRADED
                 </div>
               </div>
@@ -174,8 +147,17 @@ export default function Home() {
                 <div className="font-mono text-xs font-bold text-slate-500">
                   ZOOMIE RISK
                 </div>
-                <div className="mt-2 text-3xl font-black text-red-600">
+                <div className="mt-2 text-2xl font-black text-red-700">
                   HIGH
+                </div>
+              </div>
+
+              <div className="border-2 border-slate-900 bg-white p-4">
+                <div className="font-mono text-xs font-bold text-slate-500">
+                  LOVE KERNEL
+                </div>
+                <div className="mt-2 text-2xl font-black text-emerald-700">
+                  OK
                 </div>
               </div>
             </div>
@@ -211,14 +193,7 @@ export default function Home() {
           </ul>
         </Card>
 
-        <Card title="Performance Index" icon={<Cpu />}>
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <Metric label="Child Compatibility" value="87" />
-            <Metric label="Mud Generation" value="94" />
-            <Metric label="Sock Throughput" value="99" />
-            <Metric label="Firmware Stability" value="31" />
-          </div>
-        </Card>
+
 
         <Card title="Recent Incident Report" icon={<AlertTriangle />}>
           <h3 className="text-xl font-black">#4821 — Unauthorized Pond Deployment</h3>
@@ -235,16 +210,7 @@ export default function Home() {
           </a>
         </Card>
 
-        <Card id="errors" title="Common Error Codes" icon={<Bug />}>
-          <div className="space-y-3">
-            {errors.map(([code, desc]) => (
-              <div key={code} className="grid grid-cols-[105px_1fr] gap-3 text-sm">
-                <code className="rounded bg-slate-100 px-2 py-1 font-bold">{code}</code>
-                <span className="text-slate-600">{desc}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
+
 
         <Card id="report" title="Generate Your Doodle Report" icon={<HeartPulse />}>
           <p className="text-sm leading-6 text-slate-600">

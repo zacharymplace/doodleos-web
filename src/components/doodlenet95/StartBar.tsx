@@ -9,7 +9,7 @@ const shortcuts = [
 
 export function StartBar() {
   return (
-    <div className="sticky bottom-0 z-40 border-t-2 border-slate-900 bg-[#c0c0c0] px-2 py-2 font-mono text-[10px] font-black uppercase shadow-[0_-2px_0px_#ffffff_inset] sm:px-4">
+    <div className="sticky bottom-0 z-40 hidden border-t-2 border-slate-900 bg-[#c0c0c0] px-4 py-2 font-mono text-[10px] font-black uppercase shadow-[0_-2px_0px_#ffffff_inset] md:block">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2">
         <Link
           href="/"
