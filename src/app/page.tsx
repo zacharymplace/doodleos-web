@@ -1,8 +1,6 @@
 import {
   AlertTriangle,
   BadgeCheck,
-  Bug,
-  Cpu,
   Dog,
   FileText,
   Gauge,
@@ -18,13 +16,6 @@ const services = [
   ["Recall System", "Partial Outage", "warn"],
   ["Self Control", "Major Incident", "down"],
   ["Mud Avoidance", "Major Incident", "down"],
-];
-
-const errors = [
-  ["DOODLE_014", "Refuses to walk in rain after begging to go outside"],
-  ["DOODLE_233", "Has stolen sock but wants you to chase"],
-  ["DOODLE_502", "Wet beard failure"],
-  ["DOODLE_721", "Sudden 3AM zoomies"],
 ];
 
 const patchNotes = [
@@ -277,14 +268,5 @@ function Card({
       </div>
       {children}
     </article>
-  );
-}
-
-function Metric({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-xl border bg-slate-50 p-4">
-      <div className="text-3xl font-black text-indigo-700">{value}</div>
-      <div className="mt-1 text-slate-600">{label}</div>
-    </div>
   );
 }
