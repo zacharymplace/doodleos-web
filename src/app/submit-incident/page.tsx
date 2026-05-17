@@ -75,7 +75,7 @@ export default function SubmitIncidentPage() {
             ? "Containment possible with treats."
             : "Situation considered manageable.",
     };
-  }, [incident, name, severityScore]);
+  }, [name, severityScore]);
 
   return (
     <Shell>
