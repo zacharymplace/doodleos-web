@@ -16,6 +16,7 @@ export function SiteHeader() {
           <Link href="/error-codes">Error Codes</Link>
           <Link href="/incidents">Archive</Link>
           <Link href="/report">Report</Link>
+          <Link href="/archetypes">Archetypes</Link>
           <Link href="/submit-incident">Submit</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/share-kit">Share Kit</Link>
