@@ -9,6 +9,7 @@ import {
   HeartPulse,
   Terminal,
 } from "lucide-react";
+import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
 
 const services = [
   ["Tail Wagging Service", "Operational", "ok"],
@@ -138,6 +139,44 @@ export default function Home() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-5 px-6 pb-16 md:grid-cols-3">
+
+        <div className="md:col-span-3">
+          <WindowPanel title="DOODLENET95.EXE">
+            <div className="grid gap-4 md:grid-cols-4">
+              <div className="border-2 border-slate-900 bg-white p-4">
+                <div className="font-mono text-xs font-bold text-slate-500">
+                  ACTIVE INCIDENTS
+                </div>
+                <div className="mt-2 text-3xl font-black">14</div>
+              </div>
+
+              <div className="border-2 border-slate-900 bg-white p-4">
+                <div className="font-mono text-xs font-bold text-slate-500">
+                  SOCK BREACHES
+                </div>
+                <div className="mt-2 text-3xl font-black">221</div>
+              </div>
+
+              <div className="border-2 border-slate-900 bg-white p-4">
+                <div className="font-mono text-xs font-bold text-slate-500">
+                  RECALL STATUS
+                </div>
+                <div className="mt-2 text-3xl font-black text-amber-600">
+                  DEGRADED
+                </div>
+              </div>
+
+              <div className="border-2 border-slate-900 bg-white p-4">
+                <div className="font-mono text-xs font-bold text-slate-500">
+                  ZOOMIE RISK
+                </div>
+                <div className="mt-2 text-3xl font-black text-red-600">
+                  HIGH
+                </div>
+              </div>
+            </div>
+          </WindowPanel>
+        </div>
         <Card id="status" title="System Status" icon={<Gauge />}>
           <div className="space-y-3">
             {services.map(([name, status, type]) => (
@@ -258,8 +297,11 @@ function Card({
   id?: string;
 }) {
   return (
-    <article id={id} className="rounded-2xl border bg-white p-6 shadow-sm">
-      <div className="mb-5 flex items-center gap-2 font-black">
+    <article
+      id={id}
+      className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]"
+    >
+      <div className="mb-5 flex items-center gap-2 border-b-2 border-slate-900 pb-3 font-black">
         <span className="text-indigo-600 [&>svg]:h-5 [&>svg]:w-5">{icon}</span>
         {title}
       </div>
