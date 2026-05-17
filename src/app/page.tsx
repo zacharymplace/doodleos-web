@@ -8,7 +8,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
-import { DoodleOSButton } from "@/components/doodlenet95/DoodleOSButton";
+import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
 
 const services = [
   ["Tail Wagging Service", "Operational", "ok"],
@@ -58,15 +58,15 @@ export default function Home() {
             DoodleOS is a fake 1995 control panel for diagnosing golden doodle chaos: recall outages, sock breaches, zoomie risk, and emotionally distributed household incidents.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <DoodleOSButton href="/report" variant="primary">
+            <DoodleNetButton href="/report" variant="primary">
               Run Diagnostic
-            </DoodleOSButton>
-            <DoodleOSButton href="/submit-incident" variant="danger">
+            </DoodleNetButton>
+            <DoodleNetButton href="/submit-incident" variant="danger">
               Submit Incident
-            </DoodleOSButton>
-            <DoodleOSButton href="/status">
+            </DoodleNetButton>
+            <DoodleNetButton href="/status">
               View System Status
-            </DoodleOSButton>
+            </DoodleNetButton>
           </div>
           <div className="mt-5 flex items-center gap-2 text-sm text-slate-600">
             <BadgeCheck className="h-4 w-4 text-emerald-600" />
