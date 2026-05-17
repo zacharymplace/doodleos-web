@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
+import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
 
 const incidentTypes = [
   "Unauthorized Pond Deployment",
@@ -133,14 +134,14 @@ ${details.trim() || "No field notes provided."}
       </div>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-        <form className="rounded-2xl border bg-white p-6 shadow-sm">
+        <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
           <label className="block text-sm font-bold" htmlFor="doodle-name">
             Doodle Name
           </label>
 
           <input
             id="doodle-name"
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
@@ -151,7 +152,7 @@ ${details.trim() || "No field notes provided."}
 
           <select
             id="incident-type"
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             value={incident}
             onChange={(event) => setIncident(event.target.value)}
           >
@@ -167,18 +168,18 @@ ${details.trim() || "No field notes provided."}
           <textarea
             id="details"
             rows={5}
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             value={details}
             onChange={(event) => setDetails(event.target.value)}
           />
 
-          <div className="mt-6 rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
+          <div className="mt-6 border-2 border-slate-900 bg-white p-4 font-mono text-xs text-slate-700 shadow-[2px_2px_0px_#0f172a]">
             All reports are reviewed by certified containment personnel.
           </div>
         </form>
 
-        <article className="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <div className="border-b bg-slate-950 p-5 text-white">
+        <WindowPanel title="INCIDENT_REPORT.EXE">
+          <div className="border-b-2 border-slate-900 bg-[#1f3c88] p-5 text-white">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">INCIDENT REPORT</h2>
 
@@ -203,7 +204,7 @@ ${details.trim() || "No field notes provided."}
               <p>RESPONSE TEAM: {report.responder}</p>
             </div>
 
-            <div className="mt-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-red-800">
+            <div className="mt-6 flex items-start gap-3 border-2 border-slate-900 bg-[#ffd6d6] p-4 text-red-900 shadow-[2px_2px_0px_#0f172a]">
               <ShieldAlert className="mt-0.5 h-5 w-5" />
 
               <div>
@@ -222,11 +223,11 @@ ${details.trim() || "No field notes provided."}
               Field Notes
             </h3>
 
-            <div className="mt-2 rounded-xl bg-slate-50 p-4 leading-6 text-slate-700">
+            <div className="mt-2 border-2 border-slate-900 bg-white p-4 leading-6 text-slate-700 shadow-[2px_2px_0px_#0f172a]">
               {details}
             </div>
 
-            <div className="mt-6 flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-800">
+            <div className="mt-6 flex items-center gap-2 border-2 border-slate-900 bg-[#d9ffe2] p-4 text-emerald-900 shadow-[2px_2px_0px_#0f172a]">
               <CheckCircle2 className="h-5 w-5" />
 
               <div className="text-xs font-semibold">
@@ -234,7 +235,7 @@ ${details.trim() || "No field notes provided."}
               </div>
             </div>
           </div>
-        </article>
+        </WindowPanel>
       </section>
     </Shell>
   );

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
+import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
 
 const behaviorProfiles = {
   "Wet Beige Missile": {
@@ -174,14 +175,14 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
       </div>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-        <form className="rounded-2xl border bg-white p-6 shadow-sm">
+        <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
           <label className="block text-sm font-bold" htmlFor="doodle-name">
             Doodle Name
           </label>
 
           <input
             id="doodle-name"
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             placeholder="Murphy"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -193,7 +194,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
           <input
             id="doodle-age"
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             inputMode="numeric"
             placeholder="3"
             value={age}
@@ -209,7 +210,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
           <select
             id="primary-behavior"
-            className="mt-2 w-full rounded-xl border px-4 py-3"
+            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
             value={behavior}
             onChange={(event) =>
               setBehavior(event.target.value as Behavior)
@@ -220,13 +221,13 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
             ))}
           </select>
 
-          <div className="mt-6 rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
+          <div className="mt-6 border-2 border-slate-900 bg-white p-4 font-mono text-xs text-slate-700 shadow-[2px_2px_0px_#0f172a]">
             Report updates instantly. Shareable diagnostic output enabled.
           </div>
         </form>
 
-        <article className="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <div className="border-b bg-slate-950 p-5 text-white">
+        <WindowPanel title="DOODLE_REPORT.EXE">
+          <div className="border-b-2 border-slate-900 bg-[#1f3c88] p-5 text-white">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">DOODLE REPORT</h2>
 
@@ -252,7 +253,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               <p>PRIMARY MODE: {report.behavior}</p>
             </div>
 
-            <div className="mt-6 flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
+            <div className="mt-6 flex items-center gap-2 border-2 border-slate-900 bg-[#fff7cc] p-4 text-amber-900 shadow-[2px_2px_0px_#0f172a]">
               <ShieldAlert className="h-5 w-5" />
 
               <div className="text-xs font-semibold">
@@ -279,7 +280,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               ))}
             </ul>
           </div>
-        </article>
+        </WindowPanel>
       </section>
     </Shell>
   );
