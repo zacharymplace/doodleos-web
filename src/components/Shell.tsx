@@ -10,7 +10,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </div>
       <footer className="border-t-2 border-slate-900 bg-[#c0c0c0] px-4 py-6 font-mono text-xs font-black uppercase sm:px-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <span>DoodleOS™ / DoodleNet 95</span>
+          <span>DoodleOS™ Legacy Companion Software</span>
           <span>Recall remains in beta.</span>
         </div>
       </footer>

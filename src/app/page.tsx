@@ -8,7 +8,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
-import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
+import { DoodleOSButton } from "@/components/doodlenet95/DoodleOSButton";
 
 const services = [
   ["Tail Wagging Service", "Operational", "ok"],
@@ -49,7 +49,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-indigo-100 px-3 py-1 text-sm font-semibold text-indigo-700">
-            DoodleNet 95 public beta.
+            DoodleOS 95 Mode.
           </div>
           <h1 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
             The family computer says your doodle is unstable.
@@ -58,15 +58,15 @@ export default function Home() {
             DoodleOS is a fake 1995 control panel for diagnosing golden doodle chaos: recall outages, sock breaches, zoomie risk, and emotionally distributed household incidents.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <DoodleNetButton href="/report" variant="primary">
+            <DoodleOSButton href="/report" variant="primary">
               Run Diagnostic
-            </DoodleNetButton>
-            <DoodleNetButton href="/submit-incident" variant="danger">
+            </DoodleOSButton>
+            <DoodleOSButton href="/submit-incident" variant="danger">
               Submit Incident
-            </DoodleNetButton>
-            <DoodleNetButton href="/status">
+            </DoodleOSButton>
+            <DoodleOSButton href="/status">
               View System Status
-            </DoodleNetButton>
+            </DoodleOSButton>
           </div>
           <div className="mt-5 flex items-center gap-2 text-sm text-slate-600">
             <BadgeCheck className="h-4 w-4 text-emerald-600" />
@@ -123,7 +123,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-16 sm:px-6 md:grid-cols-3">
 
         <div className="md:col-span-3">
-          <WindowPanel title="DOODLENET95.EXE">
+          <WindowPanel title="CONTROL_PANEL.EXE">
             <div className="grid gap-4 md:grid-cols-3">
               <div className="border-2 border-slate-900 bg-white p-4">
                 <div className="font-mono text-xs font-bold text-slate-500">

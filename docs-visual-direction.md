@@ -1,10 +1,10 @@
-# DoodleNet 95 Visual Direction
+# DoodleOS 95 Mode Visual Direction
 
 DoodleOS should move toward a fake 1995 internet/intranet control panel for golden doodle infrastructure.
 
 ## Direction
 
-Working name: DoodleNet 95
+Working name: DoodleOS 95 Mode
 
 The interface should feel like:
 - Windows 95 utility software
@@ -35,6 +35,6 @@ The interface should feel like:
 
 ## Brand Feel
 
-DoodleNet 95 is not nostalgic for nostalgia’s sake.
+DoodleOS 95 Mode is not nostalgic for nostalgia’s sake.
 
 It should feel like an ancient government computer system was accidentally assigned to manage the emotional instability of golden doodles.
