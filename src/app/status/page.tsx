@@ -1,4 +1,5 @@
 import { Shell } from "@/components/Shell";
+import { SystemBadge } from "@/components/doodlenet95/SystemBadge";
 import { services } from "@/data/doodle";
 
 export default function StatusPage() {
@@ -11,20 +12,22 @@ export default function StatusPage() {
 
       <section className="mt-8 grid gap-4">
         {services.map((service) => (
-          <div key={service.name} className="rounded-2xl border bg-white p-5 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h2 className="font-black">{service.name}</h2>
-              <span
-                className={
+          <div
+            key={service.name}
+            className="border-2 border-slate-900 bg-[#ece9d8] p-5 shadow-[4px_4px_0px_#0f172a]"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="font-mono text-sm font-black uppercase">{service.name}</h2>
+              <SystemBadge
+                label={service.status}
+                tone={
                   service.level === "ok"
-                    ? "text-emerald-600"
+                    ? "ok"
                     : service.level === "warn"
-                      ? "text-amber-600"
-                      : "text-red-600"
+                      ? "warn"
+                      : "danger"
                 }
-              >
-                {service.status}
-              </span>
+              />
             </div>
           </div>
         ))}

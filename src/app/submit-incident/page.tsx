@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
+import { SystemBadge } from "@/components/doodlenet95/SystemBadge";
 
 const incidentTypes = [
   "Unauthorized Pond Deployment",
@@ -125,11 +126,16 @@ ${details.trim() || "No field notes provided."}
             {copied ? "Copied" : "Copy Incident"}
           </button>
 
-          <div
-            className={`rounded-full border px-4 py-2 text-sm font-black ${severity.style}`}
-          >
-            {severity.label} INCIDENT
-          </div>
+          <SystemBadge
+            label={`${severity.label} INCIDENT`}
+            tone={
+              severityScore >= 90
+                ? "danger"
+                : severityScore >= 80
+                  ? "warn"
+                  : "ok"
+            }
+          />
         </div>
       </div>
 
@@ -183,11 +189,16 @@ ${details.trim() || "No field notes provided."}
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">INCIDENT REPORT</h2>
 
-              <div
-                className={`rounded-full border px-3 py-1 text-xs font-black ${severity.style}`}
-              >
-                {severity.label}
-              </div>
+              <SystemBadge
+                label={severity.label}
+                tone={
+                  severityScore >= 90
+                    ? "danger"
+                    : severityScore >= 80
+                      ? "warn"
+                      : "ok"
+                }
+              />
             </div>
 
             <p className="mt-2 text-sm text-slate-300">

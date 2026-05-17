@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
+import { SystemBadge } from "@/components/doodlenet95/SystemBadge";
 
 const behaviorProfiles = {
   "Wet Beige Missile": {
@@ -231,11 +232,16 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">DOODLE REPORT</h2>
 
-              <div
-                className={`rounded-full border px-3 py-1 text-xs font-black ${severity.style}`}
-              >
-                {severity.label}
-              </div>
+              <SystemBadge
+                label={severity.label}
+                tone={
+                  report.score >= 90
+                    ? "danger"
+                    : report.score >= 80
+                      ? "warn"
+                      : "ok"
+                }
+              />
             </div>
 
             <p className="mt-2 text-sm text-slate-300">

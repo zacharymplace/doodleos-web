@@ -1,5 +1,7 @@
 import { BadgeCheck, Bone, Crown, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
+import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
+import { SystemBadge } from "@/components/doodlenet95/SystemBadge";
 
 const plans = [
   {
@@ -60,18 +62,12 @@ export default function PricingPage() {
           return (
             <article
               key={plan.name}
-              className={
-                plan.featured
-                  ? "rounded-2xl border-2 border-indigo-500 bg-white p-6 shadow-xl"
-                  : "rounded-2xl border bg-white p-6 shadow-sm"
-              }
+              className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]"
             >
               <div className="flex items-center justify-between">
                 <Icon className="h-6 w-6 text-indigo-600" />
                 {plan.featured ? (
-                  <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-black text-indigo-700">
-                    MOST UNNECESSARY
-                  </span>
+                  <SystemBadge label="MOST UNNECESSARY" tone="warn" />
                 ) : null}
               </div>
 
@@ -94,22 +90,17 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a
-                href="/report"
-                className={
-                  plan.featured
-                    ? "mt-6 block rounded-xl bg-indigo-600 px-4 py-3 text-center text-sm font-black text-white"
-                    : "mt-6 block rounded-xl bg-slate-950 px-4 py-3 text-center text-sm font-black text-white"
-                }
-              >
-                Run Diagnostic First
-              </a>
+              <div className="mt-6">
+                <DoodleNetButton href="/report" variant={plan.featured ? "primary" : "default"}>
+                  Run Diagnostic First
+                </DoodleNetButton>
+              </div>
             </article>
           );
         })}
       </section>
 
-      <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-900">
+      <section className="mt-8 border-2 border-slate-900 bg-[#fff7cc] p-6 text-amber-950 shadow-[4px_4px_0px_#0f172a]">
         <div className="flex gap-3">
           <ShieldAlert className="mt-1 h-5 w-5" />
           <div>
