@@ -12,6 +12,7 @@ const behaviorProfiles = {
     version: "4.7.2 Chaos Canary",
     score: 86,
     dependency: "Severe",
+    archetypeNote: "Moisture-enabled companion projectile with limited braking and no shame.",
     bugs: [
       "Counter surfing reintroduced",
       "Personal space deprecated",
