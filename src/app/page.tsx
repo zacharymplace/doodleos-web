@@ -208,9 +208,28 @@ export default function Home() {
             Upload flow coming soon. For now, every doodle is provisionally classified
             as a beige emotional support incident with premium mud compatibility.
           </p>
-          <button className="mt-5 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-bold text-white">
+          <a
+            href="/report"
+            className="mt-5 inline-block rounded-xl bg-indigo-600 px-4 py-3 text-sm font-bold text-white"
+          >
             Generate Report
-          </button>
+          </a>
+        </Card>
+
+        <Card title="DoodleOS Pro" icon={<BadgeCheck />}>
+          <div className="rounded-xl border bg-slate-50 p-4">
+            <div className="text-3xl font-black">$12/mo</div>
+            <p className="mt-2 text-sm text-slate-600">
+              Advanced zoomie detection, priority wet beard alerts, unlimited incident
+              reports, and monthly grooming spend panic reports.
+            </p>
+          </div>
+          <a
+            href="/pricing"
+            className="mt-5 inline-block rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+          >
+            View Pricing
+          </a>
         </Card>
       </section>
 
