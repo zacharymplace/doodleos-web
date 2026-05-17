@@ -11,6 +11,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex flex-wrap gap-3 font-mono text-[11px] font-black uppercase sm:gap-4">
+          <Link href="/about">About</Link>
           <Link href="/status">Status</Link>
           <Link href="/patch-notes">Patch Notes</Link>
           <Link href="/error-codes">Error Codes</Link>
