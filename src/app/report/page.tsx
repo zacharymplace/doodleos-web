@@ -278,6 +278,18 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               </div>
             </div>
 
+            <div className="mt-5 border-2 border-slate-900 bg-white p-4 font-sans text-sm shadow-[2px_2px_0px_#0f172a]">
+              <div className="font-mono text-xs font-black uppercase text-slate-500">
+                Archetype Classification
+              </div>
+              <p className="mt-2 leading-6">{profile.archetypeNote}</p>
+              <div className="mt-4">
+                <DoodleNetButton href="/archetypes">
+                  View Archetypes
+                </DoodleNetButton>
+              </div>
+            </div>
+
             <h3 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">Known Bugs</h3>
 
             <ul className="mt-2 space-y-1">
