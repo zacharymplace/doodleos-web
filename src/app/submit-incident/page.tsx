@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AlertTriangle, CheckCircle2, ShieldAlert } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
 
 const incidentTypes = [
@@ -60,6 +60,7 @@ export default function SubmitIncidentPage() {
   const [details, setDetails] = useState(
     "Entered retention pond despite direct verbal guidance."
   );
+  const [copied, setCopied] = useState(false);
 
   const severityScore = severityMap[incident];
   const severity = severityLabel(severityScore);
@@ -77,6 +78,32 @@ export default function SubmitIncidentPage() {
     };
   }, [name, severityScore]);
 
+  const shareText = `
+DOODLEOS INCIDENT REPORT
+
+REPORT ID: ${report.id}
+INSTANCE: ${name.trim() || "Unnamed Doodle"}
+INCIDENT: ${incident}
+SEVERITY: ${severity.label}
+SEVERITY SCORE: ${severityScore}/100
+RESPONSE TEAM: ${report.responder}
+
+MITIGATION:
+${report.mitigation}
+
+FIELD NOTES:
+${details.trim() || "No field notes provided."}
+`.trim();
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(shareText);
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  }
+
   return (
     <Shell>
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -88,10 +115,20 @@ export default function SubmitIncidentPage() {
           </p>
         </div>
 
-        <div
-          className={`rounded-full border px-4 py-2 text-sm font-black ${severity.style}`}
-        >
-          {severity.label} INCIDENT
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            onClick={handleCopy}
+            className="flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+          >
+            <Copy className="h-4 w-4" />
+            {copied ? "Copied" : "Copy Incident"}
+          </button>
+
+          <div
+            className={`rounded-full border px-4 py-2 text-sm font-black ${severity.style}`}
+          >
+            {severity.label} INCIDENT
+          </div>
         </div>
       </div>
 
