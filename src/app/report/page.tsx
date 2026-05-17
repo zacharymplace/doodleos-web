@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
 
 const behaviorProfiles = {
@@ -54,7 +55,9 @@ type Behavior = keyof typeof behaviorProfiles;
 
 function firmwareSuffix(name: string) {
   const clean = name.trim();
+
   if (!clean) return "UNREGISTERED";
+
   return clean
     .toUpperCase()
     .replace(/[^A-Z0-9]/g, "")
@@ -62,17 +65,46 @@ function firmwareSuffix(name: string) {
     .padEnd(4, "X");
 }
 
+function severityLabel(score: number) {
+  if (score >= 90) {
+    return {
+      label: "CRITICAL",
+      style: "bg-red-100 text-red-700 border-red-200",
+    };
+  }
+
+  if (score >= 80) {
+    return {
+      label: "HIGH",
+      style: "bg-amber-100 text-amber-700 border-amber-200",
+    };
+  }
+
+  return {
+    label: "MODERATE",
+    style: "bg-emerald-100 text-emerald-700 border-emerald-200",
+  };
+}
+
 export default function ReportPage() {
   const [name, setName] = useState("Murphy");
   const [behavior, setBehavior] = useState<Behavior>("Wet Beige Missile");
   const [age, setAge] = useState("3");
+  const [copied, setCopied] = useState(false);
 
   const profile = behaviorProfiles[behavior];
 
   const report = useMemo(() => {
     const parsedAge = Number(age);
-    const ageAdjustment = Number.isFinite(parsedAge) ? Math.min(Math.max(parsedAge, 0), 15) : 0;
-    const adjustedScore = Math.min(100, profile.score + Math.floor(ageAdjustment / 3));
+
+    const ageAdjustment = Number.isFinite(parsedAge)
+      ? Math.min(Math.max(parsedAge, 0), 15)
+      : 0;
+
+    const adjustedScore = Math.min(
+      100,
+      profile.score + Math.floor(ageAdjustment / 3)
+    );
 
     return {
       instance: name.trim() || "Unnamed Doodle",
@@ -89,18 +121,64 @@ export default function ReportPage() {
     };
   }, [age, behavior, name, profile]);
 
+  const severity = severityLabel(report.score);
+
+  const shareText = `
+DOODLEOS REPORT
+
+INSTANCE: ${report.instance}
+VERSION: ${report.version}
+INSTABILITY SCORE: ${report.score}/100
+SEVERITY: ${severity.label}
+RISK LEVEL: ${report.risk}
+EMOTIONAL DEPENDENCY: ${report.dependency}
+PRIMARY MODE: ${report.behavior}
+
+KNOWN BUGS:
+${profile.bugs.map((bug) => `- ${bug}`).join("\n")}
+
+RECOMMENDED ACTIONS:
+${profile.actions.map((action) => `- ${action}`).join("\n")}
+`.trim();
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(shareText);
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  }
+
   return (
     <Shell>
-      <h1 className="text-4xl font-black">Generate Your Doodle Report</h1>
-      <p className="mt-3 max-w-2xl text-slate-600">
-        Live v0.2 diagnostic generator for unstable companion infrastructure.
-      </p>
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-4xl font-black">
+            Generate Your Doodle Report
+          </h1>
+
+          <p className="mt-3 max-w-2xl text-slate-600">
+            Live v0.3 diagnostic generator for unstable companion
+            infrastructure.
+          </p>
+        </div>
+
+        <button
+          onClick={handleCopy}
+          className="flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+        >
+          <Copy className="h-4 w-4" />
+          {copied ? "Copied" : "Copy Report"}
+        </button>
+      </div>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
         <form className="rounded-2xl border bg-white p-6 shadow-sm">
           <label className="block text-sm font-bold" htmlFor="doodle-name">
             Doodle Name
           </label>
+
           <input
             id="doodle-name"
             className="mt-2 w-full rounded-xl border px-4 py-3"
@@ -112,6 +190,7 @@ export default function ReportPage() {
           <label className="mt-5 block text-sm font-bold" htmlFor="doodle-age">
             Age
           </label>
+
           <input
             id="doodle-age"
             className="mt-2 w-full rounded-xl border px-4 py-3"
@@ -121,14 +200,20 @@ export default function ReportPage() {
             onChange={(event) => setAge(event.target.value)}
           />
 
-          <label className="mt-5 block text-sm font-bold" htmlFor="primary-behavior">
+          <label
+            className="mt-5 block text-sm font-bold"
+            htmlFor="primary-behavior"
+          >
             Primary Behavior
           </label>
+
           <select
             id="primary-behavior"
             className="mt-2 w-full rounded-xl border px-4 py-3"
             value={behavior}
-            onChange={(event) => setBehavior(event.target.value as Behavior)}
+            onChange={(event) =>
+              setBehavior(event.target.value as Behavior)
+            }
           >
             {Object.keys(behaviorProfiles).map((option) => (
               <option key={option}>{option}</option>
@@ -136,34 +221,64 @@ export default function ReportPage() {
           </select>
 
           <div className="mt-6 rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
-            Report updates instantly. Upload/photo analysis comes later.
+            Report updates instantly. Shareable diagnostic output enabled.
           </div>
         </form>
 
-        <article className="rounded-2xl border bg-white p-6 font-mono text-sm shadow-sm">
-          <h2 className="font-sans text-2xl font-black">DOODLE REPORT</h2>
-          <div className="mt-5 space-y-2">
-            <p>INSTANCE: {report.instance}</p>
-            <p>VERSION: {report.version}</p>
-            <p>INSTABILITY SCORE: {report.score}/100</p>
-            <p>RISK LEVEL: {report.risk}</p>
-            <p>EMOTIONAL DEPENDENCY: {report.dependency}</p>
-            <p>PRIMARY MODE: {report.behavior}</p>
+        <article className="overflow-hidden rounded-2xl border bg-white shadow-sm">
+          <div className="border-b bg-slate-950 p-5 text-white">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-black">DOODLE REPORT</h2>
+
+              <div
+                className={`rounded-full border px-3 py-1 text-xs font-black ${severity.style}`}
+              >
+                {severity.label}
+              </div>
+            </div>
+
+            <p className="mt-2 text-sm text-slate-300">
+              Enterprise companion diagnostics
+            </p>
           </div>
 
-          <h3 className="mt-6 font-sans font-black">Known Bugs</h3>
-          <ul className="mt-2 space-y-1">
-            {profile.bugs.map((bug) => (
-              <li key={bug}>- {bug}</li>
-            ))}
-          </ul>
+          <div className="p-6 font-mono text-sm">
+            <div className="space-y-2">
+              <p>INSTANCE: {report.instance}</p>
+              <p>VERSION: {report.version}</p>
+              <p>INSTABILITY SCORE: {report.score}/100</p>
+              <p>RISK LEVEL: {report.risk}</p>
+              <p>EMOTIONAL DEPENDENCY: {report.dependency}</p>
+              <p>PRIMARY MODE: {report.behavior}</p>
+            </div>
 
-          <h3 className="mt-6 font-sans font-black">Recommended Actions</h3>
-          <ul className="mt-2 space-y-1">
-            {profile.actions.map((action) => (
-              <li key={action}>- {action}</li>
-            ))}
-          </ul>
+            <div className="mt-6 flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
+              <ShieldAlert className="h-5 w-5" />
+
+              <div className="text-xs font-semibold">
+                Doodle containment protocols may be insufficient during
+                excitement events.
+              </div>
+            </div>
+
+            <h3 className="mt-6 font-sans font-black">Known Bugs</h3>
+
+            <ul className="mt-2 space-y-1">
+              {profile.bugs.map((bug) => (
+                <li key={bug}>- {bug}</li>
+              ))}
+            </ul>
+
+            <h3 className="mt-6 font-sans font-black">
+              Recommended Actions
+            </h3>
+
+            <ul className="mt-2 space-y-1">
+              {profile.actions.map((action) => (
+                <li key={action}>- {action}</li>
+              ))}
+            </ul>
+          </div>
         </article>
       </section>
     </Shell>
