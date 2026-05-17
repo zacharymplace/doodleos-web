@@ -5,12 +5,14 @@ import { Copy, ShieldAlert } from "lucide-react";
 import { Shell } from "@/components/Shell";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
 import { SystemBadge } from "@/components/doodlenet95/SystemBadge";
+import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
 
 const behaviorProfiles = {
   "Wet Beige Missile": {
     version: "4.7.2 Chaos Canary",
     score: 86,
     dependency: "Severe",
+    archetypeNote: "Moisture-enabled companion projectile with limited braking and no shame.",
     bugs: [
       "Counter surfing reintroduced",
       "Personal space deprecated",
@@ -22,6 +24,7 @@ const behaviorProfiles = {
     version: "5.1.0 Emotional LTS",
     score: 72,
     dependency: "Enterprise-grade",
+    archetypeNote: "Provides emotional support through invasive proximity and blanket claims.",
     bugs: [
       "Blocks all doorways during sadness events",
       "Requires direct eye contact to process commands",
@@ -33,6 +36,7 @@ const behaviorProfiles = {
     version: "3.9.8 Terrain Preview",
     score: 91,
     dependency: "Moderate but damp",
+    archetypeNote: "Converts outdoor moisture into distributed indoor evidence.",
     bugs: [
       "Tracks outdoor state into indoor zones",
       "Detects puddles as mission-critical",
@@ -44,6 +48,7 @@ const behaviorProfiles = {
     version: "6.0.1 Fluff Kernel",
     score: 79,
     dependency: "High",
+    archetypeNote: "Absorbs leaves, mulch, and vague neighborhood energy.",
     bugs: [
       "Absorbs leaves, mulch, and vague neighborhood energy",
       "May become indistinguishable from rug",
@@ -271,6 +276,18 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               <div className="text-xs font-semibold">
                 Doodle containment protocols may be insufficient during
                 excitement events.
+              </div>
+            </div>
+
+            <div className="mt-5 border-2 border-slate-900 bg-white p-4 font-sans text-sm shadow-[2px_2px_0px_#0f172a]">
+              <div className="font-mono text-xs font-black uppercase text-slate-500">
+                Archetype Classification
+              </div>
+              <p className="mt-2 leading-6">{profile.archetypeNote}</p>
+              <div className="mt-4">
+                <DoodleNetButton href="/archetypes">
+                  View Archetypes
+                </DoodleNetButton>
               </div>
             </div>
 
