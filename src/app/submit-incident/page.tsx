@@ -61,6 +61,7 @@ export default function SubmitIncidentPage() {
     "Entered retention pond despite direct verbal guidance."
   );
   const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const severityScore = severityMap[incident];
   const severity = severityLabel(severityScore);
@@ -77,6 +78,32 @@ export default function SubmitIncidentPage() {
             : "Situation considered manageable.",
     };
   }, [name, severityScore]);
+
+  const shareText = `
+DOODLEOS INCIDENT REPORT
+
+REPORT ID: ${report.id}
+INSTANCE: ${name.trim() || "Unnamed Doodle"}
+INCIDENT: ${incident}
+SEVERITY: ${severity.label}
+SEVERITY SCORE: ${severityScore}/100
+RESPONSE TEAM: ${report.responder}
+
+MITIGATION:
+${report.mitigation}
+
+FIELD NOTES:
+${details.trim() || "No field notes provided."}
+`.trim();
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(shareText);
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  }
 
   const shareText = `
 DOODLEOS INCIDENT REPORT
