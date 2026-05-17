@@ -17,7 +17,9 @@ export function SiteHeader() {
           <Link href="/incidents">Incidents</Link>
           <Link href="/report">Report</Link>
           <Link href="/submit-incident">Incidents</Link>
+          <Link href="/pricing">Pricing</Link>
           <Link href="/submit-incident">Incidents</Link>
+          <Link href="/pricing">Pricing</Link>
         </nav>
 
         <Link
