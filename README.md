@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DoodleOS™
 
-## Getting Started
+Enterprise-grade companion software for high-variance golden doodles.
 
-First, run the development server:
+DoodleOS is a fast, joke-forward content site that treats golden doodles like unstable but lovable consumer software. The product surface combines fake SaaS UI, incident reporting, diagnostic reports, patch notes, and status monitoring.
+
+## Core Concept
+
+Golden doodles are treated as emotionally distributed companion infrastructure.
+
+The site should feel like:
+- enterprise SaaS
+- Apple Support
+- GitHub Status
+- incident response docs
+- municipal emergency alerts
+
+The humor should stay dry, specific, and structurally consistent.
+
+## Current Routes
+
+| Route | Purpose |
+|---|---|
+| `/` | Landing page and conversion funnel |
+| `/report` | Interactive doodle diagnostic report |
+| `/submit-incident` | Interactive incident report generator |
+| `/status` | Doodle system status page |
+| `/patch-notes` | Fake release notes |
+| `/error-codes` | Doodle diagnostic error codes |
+| `/incidents` | Static incident archive |
+
+## Validation
+
+Run before each commit:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content Rules
 
-## Learn More
+Good DoodleOS jokes are:
 
-To learn more about Next.js, take a look at the following resources:
+- specific
+- restrained
+- painfully recognizable to dog owners
+- written like serious operational documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Avoid:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- random dog humor
+- excessive cuteness
+- generic meme phrasing
+- jokes that break the fake-enterprise frame
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+v0.2
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Add copy/share support to incident reports
+- Add more behavior profiles
+- Add more incident types
+- Add stronger homepage proof cards
+
+v0.3
+
+- Add generated report permalink structure
+- Add printable/shareable report layout
+- Add fake "DoodleOS Pro" pricing page
+- Add lightweight waitlist capture
+
+v0.4
+
+- Add image-upload placeholder flow
+- Add AI-generated report concept stub
+- Add owner-submitted incident archive
+- Add merch-ready slogans page
+
+## Brand Lines
+
+- Built for chaos. Optimized for love.
+- Deploy, monitor, and maintain your doodle instance.
+- Recall remains in beta.
+- Now with improved sock detection.
+- Hypoallergenic chaos. Enterprise monitored.
