@@ -55,6 +55,19 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+        <WindowPanel title="BOOTLOG.TXT">
+          <div className="font-mono text-xs leading-6 sm:text-sm">
+            <div className="mb-3 font-black uppercase">DoodleNet 95 Boot Sequence</div>
+            <p>&gt; Loading household companion drivers...</p>
+            <p>&gt; Mounting sock file system...</p>
+            <p>&gt; Checking recall module... <span className="font-black text-amber-700">DEGRADED</span></p>
+            <p>&gt; Detecting doorbell processor... <span className="font-black text-red-700">UNSTABLE</span></p>
+            <p>&gt; Initializing love kernel... <span className="font-black text-emerald-700">OK</span></p>
+          </div>
+        </WindowPanel>
+      </section>
+
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-indigo-100 px-3 py-1 text-sm font-semibold text-indigo-700">
