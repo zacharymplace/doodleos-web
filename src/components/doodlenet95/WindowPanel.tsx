@@ -16,10 +16,10 @@ export function WindowPanel({
           {title}
         </div>
 
-        <div className="flex gap-1">
-          <div className="h-3 w-3 border border-slate-900 bg-[#c0c0c0]" />
-          <div className="h-3 w-3 border border-slate-900 bg-[#c0c0c0]" />
-          <div className="h-3 w-3 border border-slate-900 bg-[#ff5c5c]" />
+        <div className="flex gap-1 font-mono text-[9px] font-black text-slate-950">
+          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#c0c0c0]">_</div>
+          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#c0c0c0]">□</div>
+          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#ff5c5c]">×</div>
         </div>
       </div>
 

@@ -10,6 +10,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
+import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
 
 const services = [
   ["Tail Wagging Service", "Operational", "ok"],
@@ -35,20 +36,20 @@ const patchNotes = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-950">
-      <header className="border-b bg-white">
+    <main className="min-h-screen bg-[#d8d2bd] text-slate-950">
+      <header className="border-b-2 border-slate-900 bg-[#c0c0c0]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2 font-black text-xl">
+          <div className="flex items-center gap-2 font-mono text-xl font-black">
             <Dog className="h-6 w-6" />
             DoodleOS™
           </div>
-          <nav className="hidden gap-6 text-sm font-medium md:flex">
+          <nav className="hidden gap-4 font-mono text-xs font-black uppercase md:flex">
             <a href="#status">Status</a>
             <a href="#patches">Patch Notes</a>
             <a href="#errors">Error Codes</a>
             <a href="#report">Report</a>
           </nav>
-          <button className="rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white">
+          <button className="border-2 border-slate-900 bg-[#1f3c88] px-4 py-2 font-mono text-xs font-black uppercase text-white shadow-[2px_2px_0px_#0f172a]">
             Register Your Doodle
           </button>
         </div>
@@ -67,24 +68,15 @@ export default function Home() {
             unstable, emotionally distributed companion instances.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="/report"
-              className="rounded-xl bg-slate-950 px-5 py-3 font-bold text-white"
-            >
+            <DoodleNetButton href="/report" variant="primary">
               Run Diagnostic
-            </a>
-            <a
-              href="/submit-incident"
-              className="rounded-xl bg-indigo-600 px-5 py-3 font-bold text-white"
-            >
+            </DoodleNetButton>
+            <DoodleNetButton href="/submit-incident" variant="danger">
               Submit Incident
-            </a>
-            <a
-              href="/status"
-              className="rounded-xl border bg-white px-5 py-3 font-bold"
-            >
+            </DoodleNetButton>
+            <DoodleNetButton href="/status">
               View System Status
-            </a>
+            </DoodleNetButton>
           </div>
           <div className="mt-5 flex items-center gap-2 text-sm text-slate-600">
             <BadgeCheck className="h-4 w-4 text-emerald-600" />
