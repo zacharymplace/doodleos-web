@@ -73,6 +73,12 @@ export default function Home() {
               Run Diagnostic
             </a>
             <a
+              href="/submit-incident"
+              className="rounded-xl bg-indigo-600 px-5 py-3 font-bold text-white"
+            >
+              Submit Incident
+            </a>
+            <a
               href="/status"
               className="rounded-xl border bg-white px-5 py-3 font-bold"
             >
@@ -82,6 +88,10 @@ export default function Home() {
           <div className="mt-5 flex items-center gap-2 text-sm text-slate-600">
             <BadgeCheck className="h-4 w-4 text-emerald-600" />
             98.7% uptime, excluding squirrels, guests, rain, and doorbells.
+          </div>
+
+          <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800">
+            Active incident? File a report before the doodle changes its story.
           </div>
         </div>
 
@@ -174,6 +184,12 @@ export default function Home() {
             despite clear verbal guidance.
           </p>
           <p className="mt-4 text-sm font-semibold">Root cause: joy overflow.</p>
+          <a
+            href="/submit-incident"
+            className="mt-5 inline-block rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+          >
+            Submit New Incident
+          </a>
         </Card>
 
         <Card id="errors" title="Common Error Codes" icon={<Bug />}>
