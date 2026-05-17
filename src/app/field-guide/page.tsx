@@ -63,6 +63,26 @@ const guides = [
       "Clean paws before allowing couch integration.",
     ],
   },
+  {
+    title: "Suspicious Silence Investigation",
+    type: "Threat Detection",
+    summary: "Determine whether quiet behavior indicates rest, guilt, or active property modification.",
+    steps: [
+      "Pause all assumptions of innocence.",
+      "Check laundry, trash, shoes, and couch corners.",
+      "Document evidence before doodle performs charm reset.",
+    ],
+  },
+  {
+    title: "Cheese Wrapper Alert",
+    type: "Signal Response",
+    summary: "Respond to sudden doodle materialization after dairy-adjacent packaging noise.",
+    steps: [
+      "Confirm whether cheese was actually opened.",
+      "Do not reward unauthorized teleportation.",
+      "Relocate snacks above counter-surfing altitude.",
+    ],
+  },
 ];
 
 export default function FieldGuidePage() {
