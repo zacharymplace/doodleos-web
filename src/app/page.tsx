@@ -55,17 +55,16 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[1.05fr_.95fr]">
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-indigo-100 px-3 py-1 text-sm font-semibold text-indigo-700">
-            Enterprise-grade companion software.
+            DoodleNet 95 public beta.
           </div>
-          <h1 className="max-w-3xl text-5xl font-black tracking-tight md:text-7xl">
-            Built for chaos. Optimized for love.
+          <h1 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
+            The family computer says your doodle is unstable.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            DoodleOS helps you deploy, maintain, and manage the world’s most lovable,
-            unstable, emotionally distributed companion instances.
+            DoodleOS is a fake 1995 control panel for diagnosing golden doodle chaos: recall outages, sock breaches, zoomie risk, and emotionally distributed household incidents.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <DoodleNetButton href="/report" variant="primary">
@@ -130,7 +129,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-5 px-6 pb-16 md:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-16 sm:px-6 md:grid-cols-3">
 
         <div className="md:col-span-3">
           <WindowPanel title="DOODLENET95.EXE">
@@ -264,13 +263,13 @@ export default function Home() {
         </Card>
       </section>
 
-      <footer className="border-t bg-slate-950 px-6 py-10 text-white">
+      <footer className="border-t-2 border-slate-900 bg-[#c0c0c0] px-4 py-8 text-slate-950 sm:px-6">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div>
             <div className="font-black">DoodleOS™</div>
-            <p className="text-sm text-slate-400">All systems woofing.</p>
+            <p className="font-mono text-xs font-black uppercase text-slate-700">All systems woofing.</p>
           </div>
-          <Terminal className="h-5 w-5 text-emerald-400" />
+          <Terminal className="h-5 w-5 text-slate-950" />
         </div>
       </footer>
     </main>
