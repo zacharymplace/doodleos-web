@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { Dog, Folder, Gauge, TriangleAlert } from "lucide-react";
+import { Copy, Dog, Folder, Gauge, TriangleAlert } from "lucide-react";
 
 const shortcuts = [
   { href: "/report", label: "Diagnostic", icon: Gauge },
   { href: "/submit-incident", label: "Incident", icon: TriangleAlert },
   { href: "/status", label: "Status", icon: Folder },
+  { href: "/share-kit", label: "Share", icon: Copy },
 ];
 
 export function StartBar() {
