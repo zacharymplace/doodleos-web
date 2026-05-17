@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://doodleos-web.vercel.app"),
   title: "DoodleOS™ | Legacy Companion Software",
   description:
     "Enterprise-grade companion software for golden doodles. Run diagnostics, file incidents, and monitor emotionally distributed chaos.",
