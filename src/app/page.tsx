@@ -66,12 +66,18 @@ export default function Home() {
             unstable, emotionally distributed companion instances.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <button className="rounded-xl bg-slate-950 px-5 py-3 font-bold text-white">
+            <a
+              href="/report"
+              className="rounded-xl bg-slate-950 px-5 py-3 font-bold text-white"
+            >
               Run Diagnostic
-            </button>
-            <button className="rounded-xl border bg-white px-5 py-3 font-bold">
+            </a>
+            <a
+              href="/status"
+              className="rounded-xl border bg-white px-5 py-3 font-bold"
+            >
               View System Status
-            </button>
+            </a>
           </div>
           <div className="mt-5 flex items-center gap-2 text-sm text-slate-600">
             <BadgeCheck className="h-4 w-4 text-emerald-600" />
@@ -79,18 +85,45 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-slate-950 p-6 font-mono text-sm text-emerald-400 shadow-2xl">
-          <div className="mb-5 text-slate-400">DOODLEOS TERMINAL v5.2.1</div>
-          <p>&gt; INITIALIZING DOODLE INSTANCE...</p>
-          <p>&gt; FETCHING PERSONALITY PACKAGES...</p>
-          <p>&gt; LOADING LOVE MODULE...</p>
-          <p>&gt; WARNING: Recall system unstable</p>
-          <p>&gt; SUCCESS: Emotional dependency established</p>
-          <div className="my-6 border-t border-slate-700" />
-          <p className="text-slate-300">DOODLE_ID: 7F3A-DOOD-GOOD-BOY</p>
-          <p className="text-slate-300">VERSION: 5.2.1 Canine Cloud</p>
-          <p className="text-slate-300">ZOOMIES: HIGH</p>
-          <p className="text-slate-300">RISK LEVEL: MEDIUM-HIGH</p>
+        <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200">
+          <div className="border-b bg-slate-950 px-6 py-4 text-white">
+            <div className="text-xs font-black uppercase tracking-[0.3em] text-emerald-400">
+              Live Diagnostic Preview
+            </div>
+            <h2 className="mt-2 text-2xl font-black">Murphy Report</h2>
+          </div>
+
+          <div className="p-6 font-mono text-sm">
+            <div className="space-y-2">
+              <p>INSTANCE: Murphy</p>
+              <p>VERSION: 4.7.2 Chaos Canary-MURPHY</p>
+              <p>INSTABILITY SCORE: 87/100</p>
+              <p>SEVERITY: HIGH</p>
+              <p>PRIMARY MODE: Wet Beige Missile</p>
+              <p>EMOTIONAL DEPENDENCY: Severe</p>
+            </div>
+
+            <div className="my-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs font-semibold text-amber-800">
+              Warning: containment protocols may fail during guest arrival, puddle visibility,
+              or sock exposure events.
+            </div>
+
+            <div>
+              <div className="font-sans text-sm font-black">Known Bugs</div>
+              <ul className="mt-2 space-y-1 text-slate-700">
+                <li>- Counter surfing reintroduced</li>
+                <li>- Personal space deprecated</li>
+                <li>- Recall unavailable near squirrels</li>
+              </ul>
+            </div>
+
+            <a
+              href="/report"
+              className="mt-6 block rounded-xl bg-indigo-600 px-4 py-3 text-center font-sans text-sm font-black text-white"
+            >
+              Generate Your Doodle Report
+            </a>
+          </div>
         </div>
       </section>
 
