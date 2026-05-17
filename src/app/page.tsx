@@ -1,4 +1,5 @@
 import { BadgeCheck, FileText, Gauge, HeartPulse, Siren } from "lucide-react";
+import { Shell } from "@/components/Shell";
 import { WindowPanel } from "@/components/doodlenet95/WindowPanel";
 import { DoodleNetButton } from "@/components/doodlenet95/DoodleNetButton";
 
@@ -39,19 +40,8 @@ const paths = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#d8d2bd] text-slate-950">
-      <header className="border-b-2 border-slate-900 bg-[#c0c0c0]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
-          <div className="flex items-center gap-2 font-mono text-xl font-black">
-            DoodleOS™
-          </div>
-          <DoodleNetButton href="/report" variant="primary">
-            Run Diagnostic
-          </DoodleNetButton>
-        </div>
-      </header>
-
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.05fr_.95fr]">
+    <Shell>
+      <section className="grid gap-8 py-2 sm:py-4 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="mb-5 inline-flex border-2 border-slate-900 bg-[#fff7cc] px-3 py-1 font-mono text-xs font-black uppercase shadow-[2px_2px_0px_#0f172a]">
             DoodleOS 95 Mode
@@ -117,7 +107,7 @@ export default function Home() {
         </WindowPanel>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+      <section className="pb-16">
         <WindowPanel title="START_HERE.DIR">
           <div className="grid gap-5 md:grid-cols-2">
             {paths.map((path) => {
@@ -147,12 +137,6 @@ export default function Home() {
         </WindowPanel>
       </section>
 
-      <footer className="border-t-2 border-slate-900 bg-[#c0c0c0] px-4 py-8 text-slate-950 sm:px-6">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 font-mono text-xs font-black uppercase sm:flex-row sm:items-center sm:justify-between">
-          <span>DoodleOS™ Legacy Companion Software</span>
-          <span>Recall remains in beta.</span>
-        </div>
-      </footer>
-    </main>
+    </Shell>
   );
 }
