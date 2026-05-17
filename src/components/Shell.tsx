@@ -1,4 +1,5 @@
 import { SiteHeader } from "./SiteHeader";
+import { StartBar } from "./doodlenet95/StartBar";
 
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <span>Recall remains in beta.</span>
         </div>
       </footer>
+      <StartBar />
     </main>
   );
 }
