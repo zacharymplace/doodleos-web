@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DoodleOS™ | DoodleOS 95 Mode",
+  metadataBase: new URL("https://doodleos-web.vercel.app"),
+  title: "DoodleOS™ | Legacy Companion Software",
   description:
     "Enterprise-grade companion software for golden doodles. Run diagnostics, file incidents, and monitor emotionally distributed chaos.",
   openGraph: {
-    title: "DoodleOS™ | DoodleOS 95 Mode",
+    title: "DoodleOS™ | Legacy Companion Software",
     description:
       "Run diagnostics on your golden doodle instance. Recall remains in beta.",
     url: "https://doodleos-web.vercel.app",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "DoodleOS™ | DoodleOS 95 Mode",
+    title: "DoodleOS™ | Legacy Companion Software",
     description:
       "Enterprise-grade companion software for golden doodles. Recall remains in beta.",
   },
