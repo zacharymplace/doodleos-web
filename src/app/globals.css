@@ -34,14 +34,14 @@ body {
   select,
   textarea {
     cursor:
-      url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 28 C8 18, 16 10, 24 12 C31 14, 31 24, 24 26 C19 27, 16 24, 17 21 C18 18, 22 18, 24 20 C25 22, 24 24, 22 24' fill='none' stroke='%230f172a' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M8 28 C8 18, 16 10, 24 12 C31 14, 31 24, 24 26 C19 27, 16 24, 17 21 C18 18, 22 18, 24 20 C25 22, 24 24, 22 24' fill='none' stroke='%23dca86a' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='13' r='3' fill='%23f4d19b' stroke='%230f172a' stroke-width='2'/%3E%3Crect x='4' y='25' width='8' height='6' fill='%23c0c0c0' stroke='%230f172a' stroke-width='2'/%3E%3C/svg%3E") 5 30,
+      url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5' y='25' width='8' height='6' fill='%23c0c0c0' stroke='%230f172a' stroke-width='2'/%3E%3Cpath d='M10 27 C13 21, 17 15, 22 10 C25 7, 29 8, 30 12 C31 17, 26 19, 23 16 C21 14, 22 11, 25 11' fill='none' stroke='%230f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 27 C13 21, 17 15, 22 10 C25 7, 29 8, 30 12 C31 17, 26 19, 23 16 C21 14, 22 11, 25 11' fill='none' stroke='%23dca86a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 6 29,
       auto;
   }
 
   a:hover,
   button:hover {
     cursor:
-      url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 28 C8 18, 16 10, 24 12 C31 14, 31 24, 24 26 C19 27, 16 24, 17 21 C18 18, 22 18, 24 20 C25 22, 24 24, 22 24' fill='none' stroke='%230f172a' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M8 28 C8 18, 16 10, 24 12 C31 14, 31 24, 24 26 C19 27, 16 24, 17 21 C18 18, 22 18, 24 20 C25 22, 24 24, 22 24' fill='none' stroke='%23efbb75' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='13' r='3' fill='%23ffe0b3' stroke='%230f172a' stroke-width='2'/%3E%3Crect x='4' y='25' width='8' height='6' fill='%231f3c88' stroke='%230f172a' stroke-width='2'/%3E%3C/svg%3E") 5 30,
+      url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5' y='25' width='8' height='6' fill='%231f3c88' stroke='%230f172a' stroke-width='2'/%3E%3Cpath d='M10 27 C12 20, 18 12, 24 8 C28 6, 32 9, 31 14 C30 19, 24 20, 21 16 C19 13, 22 10, 25 11' fill='none' stroke='%230f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 27 C12 20, 18 12, 24 8 C28 6, 32 9, 31 14 C30 19, 24 20, 21 16 C19 13, 22 10, 25 11' fill='none' stroke='%23efbb75' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 6 29,
       pointer;
   }
 }
