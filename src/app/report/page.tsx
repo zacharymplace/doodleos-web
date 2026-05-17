@@ -149,12 +149,12 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }, 2200);
   }
 
   return (
     <Shell>
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-4xl font-black">
             Generate Your Doodle Report
@@ -168,12 +168,18 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
         <button
           onClick={handleCopy}
-          className="flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+          className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-4 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
         >
           <Copy className="h-4 w-4" />
           {copied ? "Copied" : "Copy Report"}
         </button>
       </div>
+
+      {copied ? (
+        <div className="mt-6 border-2 border-slate-900 bg-[#d9ffe2] p-3 font-mono text-xs font-black uppercase text-emerald-950 shadow-[2px_2px_0px_#0f172a]">
+          Report copied to clipboard. Doodle accountability package ready.
+        </div>
+      ) : null}
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
         <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
@@ -249,8 +255,8 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
             </p>
           </div>
 
-          <div className="p-6 font-mono text-sm">
-            <div className="space-y-2">
+          <div className="p-4 font-mono text-xs sm:p-6 sm:text-sm">
+            <div className="space-y-1.5">
               <p>INSTANCE: {report.instance}</p>
               <p>VERSION: {report.version}</p>
               <p>INSTABILITY SCORE: {report.score}/100</p>
@@ -268,7 +274,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               </div>
             </div>
 
-            <h3 className="mt-6 font-sans font-black">Known Bugs</h3>
+            <h3 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">Known Bugs</h3>
 
             <ul className="mt-2 space-y-1">
               {profile.bugs.map((bug) => (
@@ -276,7 +282,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               ))}
             </ul>
 
-            <h3 className="mt-6 font-sans font-black">
+            <h3 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">
               Recommended Actions
             </h3>
 

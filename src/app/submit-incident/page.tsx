@@ -103,12 +103,12 @@ ${details.trim() || "No field notes provided."}
 
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }, 2200);
   }
 
   return (
     <Shell>
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-4xl font-black">Submit Incident Report</h1>
 
@@ -120,7 +120,7 @@ ${details.trim() || "No field notes provided."}
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={handleCopy}
-            className="flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"
+            className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-4 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
           >
             <Copy className="h-4 w-4" />
             {copied ? "Copied" : "Copy Incident"}
@@ -138,6 +138,12 @@ ${details.trim() || "No field notes provided."}
           />
         </div>
       </div>
+
+      {copied ? (
+        <div className="mt-6 border-2 border-slate-900 bg-[#d9ffe2] p-3 font-mono text-xs font-black uppercase text-emerald-950 shadow-[2px_2px_0px_#0f172a]">
+          Incident copied to clipboard. Please preserve evidence before bath deployment.
+        </div>
+      ) : null}
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
         <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
@@ -206,8 +212,8 @@ ${details.trim() || "No field notes provided."}
             </p>
           </div>
 
-          <div className="p-6 font-mono text-sm">
-            <div className="space-y-2">
+          <div className="p-4 font-mono text-xs sm:p-6 sm:text-sm">
+            <div className="space-y-1.5">
               <p>REPORT ID: {report.id}</p>
               <p>INSTANCE: {name}</p>
               <p>INCIDENT: {incident}</p>
