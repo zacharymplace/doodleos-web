@@ -11,6 +11,10 @@ const posts = [
   "DoodleOS diagnosed my dog as a Wet Beige Missile with severe emotional dependency.",
   "Filed my first DoodleOS incident report. Root cause: joy overflow.",
   "DoodleOS is what happens when Windows 95 tries to manage a golden doodle.",
+  "My dog has been classified as a beige compliance risk.",
+  "The family computer has reviewed the evidence and the doodle is unstable.",
+  "DoodleOS says the doorbell processor is degraded. This seems accurate.",
+  "I regret to report that personal space has been deprecated.",
 ];
 
 const publicLink = "https://doodleos-web.vercel.app";
