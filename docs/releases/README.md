@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v1.0](./v1.0.md) — Public share lock
 - [v0.9](./v0.9.md) — Social preview polish
 - [v0.7](./v0.7.md) — Header consistency
 - [v0.6](./v0.6.md) — Homepage consolidation
