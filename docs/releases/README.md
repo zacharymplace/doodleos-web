@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v1.6](./v1.6.md) — Merch system
 - [v1.5](./v1.5.md) — Content engine
 - [v1.3](./v1.3.md) — Share conversion
 - [v1.2](./v1.2.md) — Content expansion
