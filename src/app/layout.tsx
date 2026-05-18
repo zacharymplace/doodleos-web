@@ -3,6 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://doodleos-web.vercel.app"),
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   title: "DoodleOS™ | Legacy Companion Software",
   description:
     "Enterprise-grade companion software for golden doodles. Run diagnostics, file incidents, and monitor emotionally distributed chaos.",
