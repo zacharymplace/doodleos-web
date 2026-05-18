@@ -1,0 +1,8 @@
+<svg width="900" height="340" viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="340" fill="#d8d2bd"/>
+  <rect x="26" y="26" width="848" height="288" fill="#ece9d8" stroke="#0f172a" stroke-width="14"/>
+  <rect x="26" y="26" width="848" height="64" fill="#7f1d1d" stroke="#0f172a" stroke-width="14"/>
+  <text x="58" y="70" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#ffffff">SYSTEM ALERT</text>
+  <text x="58" y="172" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#0f172a">DOORBELL PROCESSOR</text>
+  <text x="58" y="242" font-family="Arial, sans-serif" font-size="60" font-weight="900" fill="#b91c1c">UNSTABLE</text>
+</svg>

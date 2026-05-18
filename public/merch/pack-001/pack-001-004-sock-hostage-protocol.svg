@@ -1,0 +1,6 @@
+<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 64 H330 L370 24 H860 V276 H40 Z" fill="#ece9d8" stroke="#0f172a" stroke-width="14" stroke-linejoin="round"/>
+  <rect x="72" y="104" width="756" height="132" fill="#ffffff" stroke="#0f172a" stroke-width="8"/>
+  <text x="96" y="160" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#0f172a">SOCK HOSTAGE</text>
+  <text x="96" y="216" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#0f172a">PROTOCOL</text>
+</svg>

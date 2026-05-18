@@ -1,0 +1,7 @@
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="320,32 600,548 40,548" fill="#ffd6d6" stroke="#0f172a" stroke-width="18" stroke-linejoin="round"/>
+  <text x="320" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="68" font-weight="900" fill="#0f172a">WET</text>
+  <text x="320" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="68" font-weight="900" fill="#0f172a">BEIGE</text>
+  <text x="320" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="68" font-weight="900" fill="#0f172a">MISSILE</text>
+  <circle cx="320" cy="148" r="38" fill="#b91c1c" stroke="#0f172a" stroke-width="10"/>
+</svg>
