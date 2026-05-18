@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v2.0](./v2.0.md) — Pack 001 merch index
 - [v1.9](./v1.9.md) — Pack 001 sheet assembly
 - [v1.8](./v1.8.md) — Pack 001 SVG assets
 - [v1.7](./v1.7.md) — Pack 001 sticker spec
