@@ -83,6 +83,26 @@ const guides = [
       "Relocate snacks above counter-surfing altitude.",
     ],
   },
+  {
+    title: "Bathroom Door Audit Response",
+    type: "Privacy Recovery",
+    summary: "Manage doodle distress during unauthorized closed-door human activity.",
+    steps: [
+      "Acknowledge auditor presence without opening the door.",
+      "Avoid emotional escalation through excessive explanation.",
+      "Restore proximity once privacy window closes.",
+    ],
+  },
+  {
+    title: "Counter Surfing Review",
+    type: "Compliance Audit",
+    summary: "Assess whether food-adjacent vertical access controls have failed.",
+    steps: [
+      "Remove all edible assets from counter perimeter.",
+      "Inspect for paw evidence.",
+      "Reinforce approved floor-level waiting protocol.",
+    ],
+  },
 ];
 
 export default function FieldGuidePage() {
