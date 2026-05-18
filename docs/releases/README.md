@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v1.7](./v1.7.md) — Pack 001 sticker spec
 - [v1.6](./v1.6.md) — Merch system
 - [v1.5](./v1.5.md) — Content engine
 - [v1.3](./v1.3.md) — Share conversion
