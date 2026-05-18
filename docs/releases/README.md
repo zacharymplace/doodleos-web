@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v1.8](./v1.8.md) — Pack 001 SVG assets
 - [v1.7](./v1.7.md) — Pack 001 sticker spec
 - [v1.6](./v1.6.md) — Merch system
 - [v1.5](./v1.5.md) — Content engine
