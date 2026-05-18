@@ -39,6 +39,24 @@ const archetypes = [
     description: "Appears innocent while violating household operating procedures.",
     knownBugs: ["Counter surfing", "Selective hearing", "Evidence concealment"],
   },
+  {
+    name: "Cheese Wrapper Apparition",
+    severity: "Moderate",
+    description: "Materializes instantly when dairy-adjacent packaging is disturbed.",
+    knownBugs: ["Kitchen teleportation", "Snack entitlement", "Counter intelligence"],
+  },
+  {
+    name: "Bathroom Door Auditor",
+    severity: "Low",
+    description: "Monitors all private human activity for unauthorized separation events.",
+    knownBugs: ["Door scratching", "Privacy deprecation", "Hallway surveillance"],
+  },
+  {
+    name: "Suspicious Silence Unit",
+    severity: "Critical",
+    description: "Appears calm only when actively modifying household property.",
+    knownBugs: ["Evidence concealment", "Charm reset", "Shoe risk"],
+  },
 ];
 
 export default function ArchetypesPage() {
