@@ -2,6 +2,7 @@
 
 ## Released
 
+- [v1.3](./v1.3.md) — Share conversion
 - [v1.2](./v1.2.md) — Content expansion
 - [v1.0](./v1.0.md) — Public share lock
 - [v0.9](./v0.9.md) — Social preview polish
