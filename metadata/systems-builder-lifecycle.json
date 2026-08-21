@@ -24,23 +24,28 @@
     {
       "kind": "release-plan",
       "reference": "docs/releases/v2.1-plan.md",
-      "result": "production readiness notes remain before physical testing"
+      "result": "production readiness notes completed; controlled physical test remains"
     },
     {
       "kind": "print-readiness",
       "reference": "docs/merch/pack-001/production/print-run-checklist.md",
       "result": "checklist created; physical execution not yet performed"
+    },
+    {
+      "kind": "production-readiness",
+      "reference": "docs/merch/pack-001/production/production-readiness.md",
+      "result": "digital preparation boundary defined; one controlled test-sheet print required before batch production"
     }
   ],
   "next_action": {
-    "description": "Add Pack 001 production-readiness notes that define the pre-print readiness boundary, distinguish completed artifact preparation from physical validation, and explicitly hand off to one controlled test-sheet print before batch production."
+    "description": "Print and inspect exactly one controlled Pack 001 test sheet, record the physical validation results, and do not begin batch production until all test-print checks pass."
   },
   "blockers": [],
   "progress": {
     "release": "v2.1",
     "focus": "printable sheet artifact readiness",
     "print_run_checklist": "completed",
-    "production_readiness_notes": "pending",
+    "production_readiness_notes": "completed",
     "physical_test_sheet": "not_started"
   },
   "capabilities": [
@@ -55,6 +60,7 @@
     "merch-asset-system",
     "pack-001-svg-assets",
     "pack-001-sheet-assembly-guide",
-    "pack-001-print-run-checklist"
+    "pack-001-print-run-checklist",
+    "pack-001-production-readiness-boundary"
   ]
 }

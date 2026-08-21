@@ -8,6 +8,8 @@ System Instability
 
 - [Spec](./spec.md)
 - [Sheet Assembly Guide](./sheet-assembly.md)
+- [Print Run Checklist](./production/print-run-checklist.md)
+- [Production Readiness](./production/production-readiness.md)
 
 ## SVG Assets
 
@@ -20,4 +22,4 @@ System Instability
 
 ## Next Step
 
-Create the first printable sticker sheet artifact from these SVG assets.
+Assemble the final-size artifact, confirm the pre-print readiness boundary, and hand off exactly one controlled test-sheet print for physical validation before batch production.
