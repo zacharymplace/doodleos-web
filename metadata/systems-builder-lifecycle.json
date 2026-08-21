@@ -2,13 +2,13 @@
   "schema_version": "systems-builder-lifecycle-v1",
   "system_id": "doodleos-web",
   "display_name": "DoodleOS Web",
-  "phase": "build",
-  "condition": "active",
+  "phase": "validate",
+  "condition": "waiting",
   "source": {
     "repository": "zacharymplace/doodleos-web",
     "path": ".",
     "branch": "main",
-    "commit": "8d477f0"
+    "commit": "f425b32"
   },
   "evidence": [
     {
@@ -46,7 +46,9 @@
     "focus": "printable sheet artifact readiness",
     "print_run_checklist": "completed",
     "production_readiness_notes": "completed",
-    "physical_test_sheet": "not_started"
+    "physical_test_sheet": "not_started",
+    "digital_preparation": "completed",
+    "batch_production": "not_authorized"
   },
   "capabilities": [
     "static-comedy-content-site",
@@ -62,5 +64,16 @@
     "pack-001-sheet-assembly-guide",
     "pack-001-print-run-checklist",
     "pack-001-production-readiness-boundary"
-  ]
+  ],
+  "gate": {
+    "type": "physical_execution_required",
+    "status": "waiting",
+    "required_evidence": [
+      "one genuine final-size Pack 001 test-sheet print",
+      "printer, stock, export, and cut settings used for the test",
+      "recorded inspection results for physical size, color reproduction, legibility, borders, and cut behavior",
+      "documented pass or revision decision based on the observed physical artifact"
+    ],
+    "control": "Repository preparation and digital validation cannot satisfy this gate. A real printed sheet must be physically inspected."
+  }
 }
