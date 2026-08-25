@@ -37,6 +37,7 @@
       "result": "digital preparation boundary defined; one controlled test-sheet print required before batch production"
     }
   ],
+  "last_verified_at": "2026-08-23T22:50:15Z",
   "next_action": {
     "description": "Print and inspect exactly one controlled Pack 001 test sheet, record the physical validation results, and do not begin batch production until all test-print checks pass."
   },
