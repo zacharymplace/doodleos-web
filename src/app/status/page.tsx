@@ -6,7 +6,7 @@ export default function StatusPage() {
   return (
     <Shell>
       <h1 className="text-4xl font-black">System Status</h1>
-      <p className="mt-3 max-w-2xl text-slate-600">
+      <p className="mt-3 max-w-2xl text-(--ink-2)">
         Live operational health for high-variance doodle infrastructure.
       </p>
 
@@ -14,7 +14,7 @@ export default function StatusPage() {
         {services.map((service) => (
           <div
             key={service.name}
-            className="border-2 border-slate-900 bg-[#ece9d8] p-5 shadow-[4px_4px_0px_#0f172a]"
+            className="border-2 border-(--rule-strong) bg-(--paper) p-5"
           >
             <div className="flex items-center justify-between gap-4">
               <h2 className="font-mono text-sm font-black uppercase">{service.name}</h2>

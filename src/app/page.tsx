@@ -43,7 +43,7 @@ export default function Home() {
     <Shell>
       <section className="grid gap-8 py-2 sm:py-4 lg:grid-cols-[1.05fr_.95fr]">
         <div>
-          <div className="mb-5 inline-flex border-2 border-slate-900 bg-[#fff7cc] px-3 py-1 font-mono text-xs font-black uppercase shadow-[2px_2px_0px_#0f172a]">
+          <div className="mb-5 inline-flex border-2 border-(--rule-strong) bg-(--spot-tint) border-dashed px-3 py-1 font-mono text-xs font-black uppercase">
             DoodleOS 95 Mode
           </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
             The family computer says your doodle is unstable.
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-(--ink-2)">
             A fake legacy control panel for diagnosing golden doodle chaos:
             recall outages, sock breaches, zoomie risk, and emotionally
             distributed household incidents.
@@ -69,37 +69,37 @@ export default function Home() {
             </DoodleNetButton>
           </div>
 
-          <div className="mt-5 flex items-center gap-2 text-sm text-slate-700">
-            <BadgeCheck className="h-4 w-4 text-emerald-700" />
+          <div className="mt-5 flex items-center gap-2 text-sm text-(--ink-2)">
+            <BadgeCheck className="h-4 w-4 text-(--ink)" />
             98.7% uptime, excluding squirrels, guests, rain, and doorbells.
           </div>
         </div>
 
         <WindowPanel title="CONTROL_PANEL.EXE">
           <div className="grid gap-4">
-            <div className="border-2 border-slate-900 bg-white p-4">
-              <div className="font-mono text-xs font-bold text-slate-500">
+            <div className="border-2 border-(--rule-strong) bg-(--paper) p-4">
+              <div className="font-mono text-xs font-bold text-(--ink-muted)">
                 RECALL STATUS
               </div>
-              <div className="mt-2 text-2xl font-black text-amber-700">
+              <div className="mt-2 text-2xl font-black text-(--ink)">
                 DEGRADED
               </div>
             </div>
 
-            <div className="border-2 border-slate-900 bg-white p-4">
-              <div className="font-mono text-xs font-bold text-slate-500">
+            <div className="border-2 border-(--rule-strong) bg-(--paper) p-4">
+              <div className="font-mono text-xs font-bold text-(--ink-muted)">
                 DOORBELL PROCESSOR
               </div>
-              <div className="mt-2 text-2xl font-black text-red-700">
+              <div className="mt-2 text-2xl font-black text-(--ink)">
                 UNSTABLE
               </div>
             </div>
 
-            <div className="border-2 border-slate-900 bg-white p-4">
-              <div className="font-mono text-xs font-bold text-slate-500">
+            <div className="border-2 border-(--rule-strong) bg-(--paper) p-4">
+              <div className="font-mono text-xs font-bold text-(--ink-muted)">
                 LOVE KERNEL
               </div>
-              <div className="mt-2 text-2xl font-black text-emerald-700">
+              <div className="mt-2 text-2xl font-black text-(--ink)">
                 OK
               </div>
             </div>
@@ -116,13 +116,13 @@ export default function Home() {
               return (
                 <div
                   key={path.title}
-                  className="border-2 border-slate-900 bg-white p-5 shadow-[2px_2px_0px_#0f172a]"
+                  className="border-2 border-(--rule-strong) bg-(--paper) p-5"
                 >
                   <div className="flex items-center gap-2 font-black">
-                    <Icon className="h-5 w-5 text-slate-700" />
+                    <Icon className="h-5 w-5 text-(--ink-2)" />
                     {path.title}
                   </div>
-                  <p className="mt-3 min-h-16 text-sm leading-6 text-slate-700">
+                  <p className="mt-3 min-h-16 text-sm leading-6 text-(--ink-2)">
                     {path.summary}
                   </p>
                   <div className="mt-5">

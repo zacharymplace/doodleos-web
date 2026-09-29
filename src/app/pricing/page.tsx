@@ -49,7 +49,7 @@ export default function PricingPage() {
     <Shell>
       <div className="max-w-3xl">
         <h1 className="text-4xl font-black">DoodleOS Pricing</h1>
-        <p className="mt-3 text-slate-600">
+        <p className="mt-3 text-(--ink-2)">
           Companion infrastructure plans for households operating at elevated fluff, mud,
           and emotional dependency levels.
         </p>
@@ -62,29 +62,29 @@ export default function PricingPage() {
           return (
             <article
               key={plan.name}
-              className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]"
+              className="border-2 border-(--rule-strong) bg-(--paper) p-6"
             >
               <div className="flex items-center justify-between">
-                <Icon className="h-6 w-6 text-indigo-600" />
+                <Icon className="h-6 w-6 text-(--ink)" />
                 {plan.featured ? (
                   <SystemBadge label="MOST UNNECESSARY" tone="warn" />
                 ) : null}
               </div>
 
               <h2 className="mt-5 text-2xl font-black">{plan.name}</h2>
-              <p className="mt-2 text-sm text-slate-600">{plan.label}</p>
+              <p className="mt-2 text-sm text-(--ink-2)">{plan.label}</p>
 
               <div className="mt-6 flex items-end gap-1">
                 <span className="text-5xl font-black">{plan.price}</span>
                 {plan.price !== "Custom" ? (
-                  <span className="pb-2 text-sm font-semibold text-slate-500">/mo</span>
+                  <span className="pb-2 text-sm font-semibold text-(--ink-muted)">/mo</span>
                 ) : null}
               </div>
 
-              <ul className="mt-6 space-y-3 text-sm text-slate-700">
+              <ul className="mt-6 space-y-3 text-sm text-(--ink-2)">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex gap-2">
-                    <span className="text-emerald-600">✓</span>
+                    <span className="text-(--ink)">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -100,7 +100,7 @@ export default function PricingPage() {
         })}
       </section>
 
-      <section className="mt-8 border-2 border-slate-900 bg-[#fff7cc] p-6 text-amber-950 shadow-[4px_4px_0px_#0f172a]">
+      <section className="mt-8 border-2 border-(--rule-strong) bg-(--spot-tint) border-dashed p-6 text-(--ink)">
         <div className="flex gap-3">
           <ShieldAlert className="mt-1 h-5 w-5" />
           <div>

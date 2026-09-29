@@ -110,7 +110,7 @@ export default function FieldGuidePage() {
     <Shell>
       <div className="max-w-3xl">
         <h1 className="text-4xl font-black">DoodleOS Field Guide</h1>
-        <p className="mt-3 text-slate-700">
+        <p className="mt-3 text-(--ink-2)">
           Operational guidance for common golden doodle instability events.
         </p>
       </div>
@@ -119,13 +119,13 @@ export default function FieldGuidePage() {
         {guides.map((guide) => (
           <WindowPanel key={guide.title} title={`${guide.title.toUpperCase()}.TXT`}>
             <div className="font-mono text-sm">
-              <div className="mb-3 inline-block border-2 border-slate-900 bg-[#fff7cc] px-2 py-1 text-xs font-black uppercase">
+              <div className="mb-3 inline-block border-2 border-(--rule-strong) bg-(--spot-tint) border-dashed px-2 py-1 text-xs font-black uppercase">
                 {guide.type}
               </div>
 
               <p className="leading-6">{guide.summary}</p>
 
-              <h2 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">
+              <h2 className="mt-5 border-b-2 border-(--rule-strong) pb-2 font-sans font-black">
                 Procedure
               </h2>
 

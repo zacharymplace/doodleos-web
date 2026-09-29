@@ -76,20 +76,20 @@ function severityLabel(score: number) {
   if (score >= 90) {
     return {
       label: "CRITICAL",
-      style: "bg-red-100 text-red-700 border-red-200",
+      style: "bg-(--spot-tint) text-(--ink) border-double",
     };
   }
 
   if (score >= 80) {
     return {
       label: "HIGH",
-      style: "bg-amber-100 text-amber-700 border-amber-200",
+      style: "bg-(--spot-tint) text-(--ink) border-dashed",
     };
   }
 
   return {
     label: "MODERATE",
-    style: "bg-emerald-100 text-emerald-700 border-emerald-200",
+    style: "bg-(--data-tint) text-(--ink) border-solid",
   };
 }
 
@@ -165,7 +165,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
             Generate Your Doodle Report
           </h1>
 
-          <p className="mt-3 max-w-2xl text-slate-600">
+          <p className="mt-3 max-w-2xl text-(--ink-2)">
             Live v0.3 diagnostic generator for unstable companion
             infrastructure.
           </p>
@@ -173,7 +173,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
         <button
           onClick={handleCopy}
-          className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-4 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
+          className="flex w-fit items-center gap-2 border-2 border-(--rule-strong) bg-(--paper-2) px-4 py-2 font-mono text-xs font-black uppercase text-(--ink) transition"
         >
           <Copy className="h-4 w-4" />
           {copied ? "Copied" : "Copy Report"}
@@ -181,20 +181,20 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
       </div>
 
       {copied ? (
-        <div className="mt-6 border-2 border-slate-900 bg-[#d9ffe2] p-3 font-mono text-xs font-black uppercase text-emerald-950 shadow-[2px_2px_0px_#0f172a]">
+        <div className="mt-6 border-2 border-(--rule-strong) bg-(--data-tint) p-3 font-mono text-xs font-black uppercase text-(--ink)">
           Report copied to clipboard. Doodle accountability package ready.
         </div>
       ) : null}
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-        <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
+        <form className="border-2 border-(--rule-strong) bg-(--paper) p-6">
           <label className="block text-sm font-bold" htmlFor="doodle-name">
             Doodle Name
           </label>
 
           <input
             id="doodle-name"
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             placeholder="Murphy"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -206,7 +206,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
           <input
             id="doodle-age"
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             inputMode="numeric"
             placeholder="3"
             value={age}
@@ -222,7 +222,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
 
           <select
             id="primary-behavior"
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             value={behavior}
             onChange={(event) =>
               setBehavior(event.target.value as Behavior)
@@ -233,13 +233,13 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
             ))}
           </select>
 
-          <div className="mt-6 border-2 border-slate-900 bg-white p-4 font-mono text-xs text-slate-700 shadow-[2px_2px_0px_#0f172a]">
+          <div className="mt-6 border-2 border-(--rule-strong) bg-(--paper) p-4 font-mono text-xs text-(--ink-2)">
             Report updates instantly. Shareable diagnostic output enabled.
           </div>
         </form>
 
         <WindowPanel title="DOODLE_REPORT.EXE">
-          <div className="border-b-2 border-slate-900 bg-[#1f3c88] p-5 text-white">
+          <div className="border-b-2 border-(--rule-strong) bg-(--ink) p-5 text-(--paper)">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">DOODLE REPORT</h2>
 
@@ -255,7 +255,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               />
             </div>
 
-            <p className="mt-2 text-sm text-slate-300">
+            <p className="mt-2 text-sm text-(--paper-3)">
               Enterprise companion diagnostics
             </p>
           </div>
@@ -270,7 +270,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               <p>PRIMARY MODE: {report.behavior}</p>
             </div>
 
-            <div className="mt-6 flex items-center gap-2 border-2 border-slate-900 bg-[#fff7cc] p-4 text-amber-900 shadow-[2px_2px_0px_#0f172a]">
+            <div className="mt-6 flex items-center gap-2 border-2 border-(--rule-strong) bg-(--spot-tint) border-dashed p-4 text-(--ink)">
               <ShieldAlert className="h-5 w-5" />
 
               <div className="text-xs font-semibold">
@@ -279,8 +279,8 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               </div>
             </div>
 
-            <div className="mt-5 border-2 border-slate-900 bg-white p-4 font-sans text-sm shadow-[2px_2px_0px_#0f172a]">
-              <div className="font-mono text-xs font-black uppercase text-slate-500">
+            <div className="mt-5 border-2 border-(--rule-strong) bg-(--paper) p-4 font-sans text-sm">
+              <div className="font-mono text-xs font-black uppercase text-(--ink-muted)">
                 Archetype Classification
               </div>
               <p className="mt-2 leading-6">{profile.archetypeNote}</p>
@@ -291,7 +291,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               </div>
             </div>
 
-            <h3 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">Known Bugs</h3>
+            <h3 className="mt-5 border-b-2 border-(--rule-strong) pb-2 font-sans font-black">Known Bugs</h3>
 
             <ul className="mt-2 space-y-1">
               {profile.bugs.map((bug) => (
@@ -299,7 +299,7 @@ ${profile.actions.map((action) => `- ${action}`).join("\n")}
               ))}
             </ul>
 
-            <h3 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">
+            <h3 className="mt-5 border-b-2 border-(--rule-strong) pb-2 font-sans font-black">
               Recommended Actions
             </h3>
 

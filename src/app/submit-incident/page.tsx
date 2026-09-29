@@ -39,20 +39,20 @@ function severityLabel(score: number) {
   if (score >= 90) {
     return {
       label: "CRITICAL",
-      style: "bg-red-100 text-red-700 border-red-200",
+      style: "bg-(--spot-tint) text-(--ink) border-double",
     };
   }
 
   if (score >= 80) {
     return {
       label: "HIGH",
-      style: "bg-amber-100 text-amber-700 border-amber-200",
+      style: "bg-(--spot-tint) text-(--ink) border-dashed",
     };
   }
 
   return {
     label: "MODERATE",
-    style: "bg-emerald-100 text-emerald-700 border-emerald-200",
+    style: "bg-(--data-tint) text-(--ink) border-solid",
   };
 }
 
@@ -112,7 +112,7 @@ ${details.trim() || "No field notes provided."}
         <div>
           <h1 className="text-4xl font-black">Submit Incident Report</h1>
 
-          <p className="mt-3 max-w-2xl text-slate-600">
+          <p className="mt-3 max-w-2xl text-(--ink-2)">
             Document and classify active doodle-related infrastructure failures.
           </p>
         </div>
@@ -120,7 +120,7 @@ ${details.trim() || "No field notes provided."}
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={handleCopy}
-            className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-4 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
+            className="flex w-fit items-center gap-2 border-2 border-(--rule-strong) bg-(--paper-2) px-4 py-2 font-mono text-xs font-black uppercase text-(--ink) transition"
           >
             <Copy className="h-4 w-4" />
             {copied ? "Copied" : "Copy Incident"}
@@ -140,20 +140,20 @@ ${details.trim() || "No field notes provided."}
       </div>
 
       {copied ? (
-        <div className="mt-6 border-2 border-slate-900 bg-[#d9ffe2] p-3 font-mono text-xs font-black uppercase text-emerald-950 shadow-[2px_2px_0px_#0f172a]">
+        <div className="mt-6 border-2 border-(--rule-strong) bg-(--data-tint) p-3 font-mono text-xs font-black uppercase text-(--ink)">
           Incident copied to clipboard. Please preserve evidence before bath deployment.
         </div>
       ) : null}
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-        <form className="border-2 border-slate-900 bg-[#ece9d8] p-6 shadow-[4px_4px_0px_#0f172a]">
+        <form className="border-2 border-(--rule-strong) bg-(--paper) p-6">
           <label className="block text-sm font-bold" htmlFor="doodle-name">
             Doodle Name
           </label>
 
           <input
             id="doodle-name"
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
@@ -164,7 +164,7 @@ ${details.trim() || "No field notes provided."}
 
           <select
             id="incident-type"
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             value={incident}
             onChange={(event) => setIncident(event.target.value)}
           >
@@ -180,18 +180,18 @@ ${details.trim() || "No field notes provided."}
           <textarea
             id="details"
             rows={5}
-            className="mt-2 w-full border-2 border-slate-900 bg-white px-4 py-3 shadow-[2px_2px_0px_#0f172a]"
+            className="mt-2 w-full border-2 border-(--rule-strong) bg-(--paper) px-4 py-3"
             value={details}
             onChange={(event) => setDetails(event.target.value)}
           />
 
-          <div className="mt-6 border-2 border-slate-900 bg-white p-4 font-mono text-xs text-slate-700 shadow-[2px_2px_0px_#0f172a]">
+          <div className="mt-6 border-2 border-(--rule-strong) bg-(--paper) p-4 font-mono text-xs text-(--ink-2)">
             All reports are reviewed by certified containment personnel.
           </div>
         </form>
 
         <WindowPanel title="INCIDENT_REPORT.EXE">
-          <div className="border-b-2 border-slate-900 bg-[#1f3c88] p-5 text-white">
+          <div className="border-b-2 border-(--rule-strong) bg-(--ink) p-5 text-(--paper)">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-black">INCIDENT REPORT</h2>
 
@@ -207,7 +207,7 @@ ${details.trim() || "No field notes provided."}
               />
             </div>
 
-            <p className="mt-2 text-sm text-slate-300">
+            <p className="mt-2 text-sm text-(--paper-3)">
               Active companion instability event
             </p>
           </div>
@@ -221,7 +221,7 @@ ${details.trim() || "No field notes provided."}
               <p>RESPONSE TEAM: {report.responder}</p>
             </div>
 
-            <div className="mt-6 flex items-start gap-3 border-2 border-slate-900 bg-[#ffd6d6] p-4 text-red-900 shadow-[2px_2px_0px_#0f172a]">
+            <div className="mt-6 flex items-start gap-3 border-2 border-(--rule-strong) bg-(--spot-tint) border-4 border-double p-4 text-(--ink)">
               <ShieldAlert className="mt-0.5 h-5 w-5" />
 
               <div>
@@ -240,11 +240,11 @@ ${details.trim() || "No field notes provided."}
               Field Notes
             </h3>
 
-            <div className="mt-2 border-2 border-slate-900 bg-white p-4 leading-6 text-slate-700 shadow-[2px_2px_0px_#0f172a]">
+            <div className="mt-2 border-2 border-(--rule-strong) bg-(--paper) p-4 leading-6 text-(--ink-2)">
               {details}
             </div>
 
-            <div className="mt-6 flex items-center gap-2 border-2 border-slate-900 bg-[#d9ffe2] p-4 text-emerald-900 shadow-[2px_2px_0px_#0f172a]">
+            <div className="mt-6 flex items-center gap-2 border-2 border-(--rule-strong) bg-(--data-tint) p-4 text-(--ink)">
               <CheckCircle2 className="h-5 w-5" />
 
               <div className="text-xs font-semibold">

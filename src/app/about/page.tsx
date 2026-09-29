@@ -7,14 +7,14 @@ export default function AboutPage() {
     <Shell>
       <div className="max-w-3xl">
         <h1 className="text-4xl font-black">About DoodleOS</h1>
-        <p className="mt-3 text-slate-700">
+        <p className="mt-3 text-(--ink-2)">
           Legacy companion software for diagnosing golden doodle chaos.
         </p>
       </div>
 
       <section className="mt-8 grid gap-5">
         <WindowPanel title="README.TXT">
-          <div className="space-y-4 text-sm leading-7 text-slate-900">
+          <div className="space-y-4 text-sm leading-7 text-(--ink)">
             <p>
               DoodleOS is a fake 1995-style control panel for golden doodle owners.
               It treats everyday doodle behavior like enterprise software incidents,

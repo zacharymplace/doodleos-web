@@ -3,10 +3,10 @@ import { Dog } from "lucide-react";
 
 export function SiteHeader() {
   return (
-    <header className="border-b-2 border-slate-900 bg-[#c0c0c0]">
+    <header className="border-b-2 border-(--rule-strong) bg-(--paper-2)">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
         <Link href="/" className="flex items-center gap-2 font-mono text-xl font-black">
-          <Dog className="h-6 w-6" />
+          <Dog className="h-6 w-6 text-(--spot)" />
           DoodleOS™
         </Link>
 
@@ -26,7 +26,7 @@ export function SiteHeader() {
 
         <Link
           href="/report"
-          className="w-fit border-2 border-slate-900 bg-[#1f3c88] px-4 py-2 font-mono text-xs font-black uppercase text-white shadow-[2px_2px_0px_#0f172a]"
+          className="w-fit border-2 border-(--rule-strong) bg-(--ink) px-4 py-2 font-mono text-xs font-black uppercase text-(--paper)"
         >
           Run Diagnostic
         </Link>

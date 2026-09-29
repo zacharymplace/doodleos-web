@@ -64,7 +64,7 @@ export default function ArchetypesPage() {
     <Shell>
       <div className="max-w-3xl">
         <h1 className="text-4xl font-black">Doodle Archetypes</h1>
-        <p className="mt-3 text-slate-700">
+        <p className="mt-3 text-(--ink-2)">
           Classification profiles for unstable golden doodle companion instances.
         </p>
       </div>
@@ -73,13 +73,13 @@ export default function ArchetypesPage() {
         {archetypes.map((archetype) => (
           <WindowPanel key={archetype.name} title={`${archetype.name.toUpperCase()}.CFG`}>
             <div className="font-mono text-sm">
-              <div className="mb-3 inline-block border-2 border-slate-900 bg-[#fff7cc] px-2 py-1 text-xs font-black uppercase">
+              <div className="mb-3 inline-block border-2 border-(--rule-strong) bg-(--spot-tint) border-dashed px-2 py-1 text-xs font-black uppercase">
                 Severity: {archetype.severity}
               </div>
 
               <p className="leading-6">{archetype.description}</p>
 
-              <h2 className="mt-5 border-b-2 border-slate-900 pb-2 font-sans font-black">
+              <h2 className="mt-5 border-b-2 border-(--rule-strong) pb-2 font-sans font-black">
                 Known Bugs
               </h2>
 

@@ -35,13 +35,13 @@ export default function ShareKitPage() {
     <Shell>
       <div className="max-w-3xl">
         <h1 className="text-4xl font-black">Share Kit</h1>
-        <p className="mt-3 text-slate-700">
+        <p className="mt-3 text-(--ink-2)">
           Copy-ready lines for spreading DoodleOS without explaining the joke too hard.
         </p>
       </div>
 
       {copied ? (
-        <div className="mt-6 border-2 border-slate-900 bg-[#d9ffe2] p-3 font-mono text-xs font-black uppercase text-emerald-950 shadow-[2px_2px_0px_#0f172a]">
+        <div className="mt-6 border-2 border-(--rule-strong) bg-(--data-tint) p-3 font-mono text-xs font-black uppercase text-(--ink)">
           Copied {copied} to clipboard.
         </div>
       ) : null}
@@ -52,14 +52,14 @@ export default function ShareKitPage() {
             {posts.map((post, index) => (
               <div
                 key={post}
-                className="grid gap-3 border-2 border-slate-900 bg-white p-4 shadow-[2px_2px_0px_#0f172a] sm:grid-cols-[1fr_auto] sm:items-center"
+                className="grid gap-3 border-2 border-(--rule-strong) bg-(--paper) p-4 sm:grid-cols-[1fr_auto] sm:items-center"
               >
                 <div className="font-mono text-sm">{post}</div>
 
                 <button
                   type="button"
                   onClick={() => copyText(`line ${index + 1}`, post)}
-                  className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-3 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
+                  className="flex w-fit items-center gap-2 border-2 border-(--rule-strong) bg-(--paper-2) px-3 py-2 font-mono text-xs font-black uppercase text-(--ink) transition"
                 >
                   <Copy className="h-3.5 w-3.5" />
                   Copy
@@ -71,14 +71,14 @@ export default function ShareKitPage() {
 
         <WindowPanel title="PUBLIC_LINK.URL">
           <div className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-center">
-            <div className="break-all border-2 border-slate-900 bg-white p-4 font-mono text-sm shadow-[2px_2px_0px_#0f172a]">
+            <div className="break-all border-2 border-(--rule-strong) bg-(--paper) p-4 font-mono text-sm">
               {publicLink}
             </div>
 
             <button
               type="button"
               onClick={() => copyText("public link", publicLink)}
-              className="flex w-fit items-center gap-2 border-2 border-slate-900 bg-[#c0c0c0] px-3 py-2 font-mono text-xs font-black uppercase text-slate-950 shadow-[2px_2px_0px_#0f172a] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
+              className="flex w-fit items-center gap-2 border-2 border-(--rule-strong) bg-(--paper-2) px-3 py-2 font-mono text-xs font-black uppercase text-(--ink) transition"
             >
               <Copy className="h-3.5 w-3.5" />
               Copy Link

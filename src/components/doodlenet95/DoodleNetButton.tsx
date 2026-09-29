@@ -11,11 +11,11 @@ export function DoodleNetButton({
 }) {
   const styles = {
     default:
-      "border-2 border-slate-900 bg-[#c0c0c0] text-slate-950 shadow-[2px_2px_0px_#0f172a] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none",
+      "border-2 border-(--rule-strong) bg-(--paper-2) text-(--ink)",
     primary:
-      "border-2 border-slate-900 bg-[#1f3c88] text-white shadow-[2px_2px_0px_#0f172a] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none",
+      "border-2 border-(--rule-strong) bg-(--ink) text-(--paper)",
     danger:
-      "border-2 border-slate-900 bg-[#ff5c5c] text-slate-950 shadow-[2px_2px_0px_#0f172a] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none",
+      "border-2 border-(--rule-strong) bg-(--spot-tint) text-(--ink) border-double",
   };
 
   return (

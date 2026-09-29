@@ -9,21 +9,21 @@ export function WindowPanel({
 }) {
   return (
     <div
-      className={`overflow-hidden border-2 border-slate-900 bg-[#ece9d8] shadow-[4px_4px_0px_#0f172a] ${className}`}
+      className={`overflow-hidden border-2 border-(--rule-strong) bg-(--paper) ${className}`}
     >
-      <div className="flex items-center justify-between border-b-2 border-slate-900 bg-[#1f3c88] px-3 py-2 text-white">
+      <div className="flex items-center justify-between border-b-2 border-(--rule-strong) bg-(--ink) px-3 py-2 text-(--paper)">
         <div className="font-mono text-xs font-bold tracking-wide">
           {title}
         </div>
 
-        <div className="flex gap-1 font-mono text-[9px] font-black text-slate-950">
-          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#c0c0c0]">_</div>
-          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#c0c0c0]">□</div>
-          <div className="grid h-4 w-4 place-items-center border border-slate-900 bg-[#ff5c5c]">×</div>
+        <div className="flex gap-1 font-mono text-[9px] font-black text-(--ink)">
+          <div className="grid h-4 w-4 place-items-center border border-(--rule-strong) bg-(--paper-2)">_</div>
+          <div className="grid h-4 w-4 place-items-center border border-(--rule-strong) bg-(--paper-2)">□</div>
+          <div className="grid h-4 w-4 place-items-center border border-(--rule-strong) bg-(--spot-tint)">×</div>
         </div>
       </div>
 
-      <div className="bg-[#ece9d8] p-5">
+      <div className="bg-(--paper) p-5">
         {children}
       </div>
     </div>
