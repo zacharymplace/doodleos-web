@@ -32,7 +32,13 @@ function incidentId(name: string) {
     .replace(/[^A-Z0-9]/g, "")
     .slice(0, 4);
 
-  return `INC-${seed || "DOOD"}-${Math.floor(1000 + Math.random() * 9000)}`;
+  // Derived from the name, not Math.random(): a random ID differs between server and client render and breaks hydration.
+  let hash = 0;
+  for (const char of name) {
+    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }
+
+  return `INC-${seed || "DOOD"}-${1000 + (hash % 9000)}`;
 }
 
 function severityLabel(score: number) {
